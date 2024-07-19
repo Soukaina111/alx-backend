@@ -52,9 +52,6 @@ class Server:
         """
         Retrieves a page of data from the dataset.
 
-        Args:
-            page (int, optional): The page number (starting from 1). Defaults to 1.
-            page_size (int, optional): The number of items to display per page. Defaults to 10.
 
         Returns:
             List[List]: The requested page of data.
@@ -68,11 +65,6 @@ class Server:
         """
         Retrieves information about a page of data, given the index of an item
         in the dataset and the desired page size.
-
-        Args:
-            index (int, optional): The index of the item in the dataset. Defaults to None.
-            page_size (int, optional): The number of items to display per page. Defaults to 10.
-
         Returns:
             Dict: A dictionary containing the following keys:
                 - index: The index of the requested item.
