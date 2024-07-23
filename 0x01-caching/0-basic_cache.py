@@ -4,6 +4,7 @@
 # Import the BaseCaching class from the 'base_caching' module
 BaseCaching = __import__('base_caching').BaseCaching
 
+
 class BasicCache(BaseCaching):
     """
     A basic cache implementation class
