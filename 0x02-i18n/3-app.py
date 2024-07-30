@@ -13,6 +13,8 @@ from flask import render_template
 from flask_babel import Babel
 
 # Define a configuration class for the application
+
+
 class Config(object):
     """
     Application configuration class
@@ -24,6 +26,8 @@ class Config(object):
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 # Instantiate the Flask application object
+
+
 app = Flask(__name__)
 # Load the configuration from the Config class
 app.config.from_object(Config)
@@ -32,6 +36,8 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 # Define a function to select the locale based on the request object
+
+
 @babel.localeselector
 def get_locale() -> str:
     """
@@ -40,6 +46,8 @@ def get_locale() -> str:
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 # Define a route for the root URL '/'
+
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """
@@ -49,6 +57,8 @@ def index() -> str:
     return render_template('3-index.html')
 
 # Check if the script is being run directly (not imported as a module)
+
+
 if __name__ == '__main__':
     # Run the Flask application
     app.run()
