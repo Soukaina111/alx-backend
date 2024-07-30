@@ -12,7 +12,8 @@ from flask import render_template
 app = Flask(__name__)
 
 # Define a route for the root URL '/'
-# The strict_slashes=False parameter ensures that URLs with and without a trailing slash are both handled
+
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """
@@ -22,6 +23,8 @@ def index() -> str:
     return render_template('0-index.html')
 
 # Check if the script is being run directly (not imported as a module)
+
+
 if __name__ == '__main__':
     # Run the Flask application
     app.run()
