@@ -38,7 +38,7 @@ const outputNotif = (phoneNumber, message, job, done) => {
  * @param {Job[]} jobs
  * @param {Queue} queue
  */
-export const createPushNotificationsJobs = (jobs, queue) => {
+export const Pushed_Notifs = (jobs, queue) => {
   if (!(jobs instanceof Array)) {
     throw new Error('Jobs is not an array');
   }
@@ -73,4 +73,4 @@ export const createPushNotificationsJobs = (jobs, queue) => {
   }
 };
 
-export default createPushNotificationsJobs;
+export default Pushed_Notifs;
